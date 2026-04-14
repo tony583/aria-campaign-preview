@@ -216,9 +216,7 @@
       box-shadow: 0 8px 32px rgba(15,31,23,0.15);
       z-index: 999;
     }
-    .nav-mobile.open {
-      display: flex;
-    }
+    .nav-mobile.open { display: flex; }
     .nav-mobile a {
       font-size: 16px;
       font-weight: 600;
@@ -1342,6 +1340,43 @@ body::before, body::after, html::before, html::after { display: none !important;
   .hero-badge { margin-top: 0 !important; }
 }
 
+
+/* Mobile menu - strong overrides */
+#mobileMenu {
+  background: #ffffff !important;
+  z-index: 9999 !important;
+  position: fixed !important;
+  top: 72px !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 16px 24px 24px !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.2) !important;
+  border-top: 2px solid #1a3c2e !important;
+}
+#mobileMenu a {
+  color: #0f1f17 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 14px 0 !important;
+  border-bottom: 1px solid #f0ede8 !important;
+  display: block !important;
+  text-decoration: none !important;
+  background: none !important;
+}
+#mobileMenu a.nav-cta {
+  color: #ffffff !important;
+  background: #1a3c2e !important;
+  padding: 14px 20px !important;
+  border-radius: 8px !important;
+  text-align: center !important;
+  margin-top: 8px !important;
+  border-bottom: none !important;
+  font-weight: 700 !important;
+}
+#menuOverlay.active {
+  display: block !important;
+}
+
 </style>
 </head>
 <body>
@@ -1364,7 +1399,8 @@ body::before, body::after, html::before, html::after { display: none !important;
         <span></span><span></span><span></span>
       </button>
     </div>
-    <div class="nav-mobile" id="mobileMenu">
+    <div id="menuOverlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:998;" onclick="closeMenu()"></div>
+  <div class="nav-mobile" id="mobileMenu">
       <a href="#home" onclick="closeMobile()">Home</a>
       <a href="#about" onclick="closeMobile()">About</a>
       <a href="#licensee-services" onclick="closeMobile()">Licensee Services</a>
@@ -1934,6 +1970,13 @@ body::before, body::after, html::before, html::after { display: none !important;
       }
     });
 
+    function closeMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      const overlay = document.getElementById('menuOverlay');
+      if (overlay) overlay.style.display = 'none';
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
     // ---- Mobile hamburger ----
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -1942,6 +1985,8 @@ body::before, body::after, html::before, html::after { display: none !important;
     hamburger.addEventListener('click', () => {
       menuOpen = !menuOpen;
       mobileMenu.classList.toggle('open', menuOpen);
+      const overlay = document.getElementById('menuOverlay');
+      if (overlay) overlay.style.display = menuOpen ? 'block' : 'none';
       const spans = hamburger.querySelectorAll('span');
       if (menuOpen) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
