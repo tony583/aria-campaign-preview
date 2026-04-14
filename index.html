@@ -313,8 +313,8 @@
     .hero {
       background: var(--cream);
       padding: var(--section-py) 0;
-      padding-top: 200px;
-      padding-bottom: 80px;
+      padding-top: 100px;
+      padding-bottom: 60px;
     }
     .hero-inner {
       max-width: 1200px;
@@ -1258,6 +1258,64 @@ body::before, body::after, html::before, html::after { display: none !important;
   #specialist-services > div > div > div[style*="max-width:1200px"] {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Fix hero padding */
+  .hero { padding-top: 100px !important; }
+
+  /* About stat boxes - force display */
+  #about div[style*="background:#1a3c2e;border-radius:12px"] {
+    display: block !important;
+    padding: 20px 16px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* About value cards */  
+  #about div[style*="background:#f8f5f0;border-radius:10px"] {
+    display: block !important;
+    padding: 20px 16px !important;
+  }
+
+  /* Make sure all grid-3 children display as blocks */
+  .grid-3 > div, .grid-2 > div {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Pain point cards */
+  #pain-points div[style*="background:#f8f5f0;border-radius:10px"] {
+    display: block !important;
+    padding: 18px 16px !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Fix about section top spacing - prevent it from appearing at top */
+  #about { margin-top: 0 !important; }
+
+  /* Ensure hero section is visible and at top */
+  #home.hero { 
+    display: block !important; 
+    visibility: visible !important;
+    position: relative !important;
+  }
+
+  /* Section containers */
+  #about > div[style],
+  #licensee-services > div[style],
+  #specialist-services > div[style],
+  #contact > div[style],
+  #pain-points > div[style] {
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
