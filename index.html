@@ -312,9 +312,8 @@
     }
     .hero {
       background: var(--cream);
-      padding: var(--section-py) 0;
-      padding-top: 100px;
-      padding-bottom: 60px;
+      padding-top: 120px;
+      padding-bottom: 80px;
     }
     .hero-inner {
       max-width: 1200px;
@@ -1078,7 +1077,7 @@ body::before, body::after, html::before, html::after { display: none !important;
   }
 
   /* Hero section */
-  .hero { padding-top: 120px !important; padding-bottom: 60px !important; }
+  
   .hero-inner { grid-template-columns: 1fr !important; gap: 32px !important; }
   .hero h1 { font-size: 32px !important; }
   .hero-subtitle { font-size: 15px !important; }
@@ -1264,7 +1263,7 @@ body::before, body::after, html::before, html::after { display: none !important;
 
 @media (max-width: 768px) {
   /* Fix hero padding */
-  .hero { padding-top: 100px !important; }
+  
 
   /* About stat boxes - force display */
   #about div[style*="background:#1a3c2e;border-radius:12px"] {
@@ -1298,12 +1297,7 @@ body::before, body::after, html::before, html::after { display: none !important;
   /* Fix about section top spacing - prevent it from appearing at top */
   #about { margin-top: 0 !important; }
 
-  /* Ensure hero section is visible and at top */
-  #home.hero { 
-    display: block !important; 
-    visibility: visible !important;
-    position: relative !important;
-  }
+  
 
   /* Section containers */
   #about > div[style],
@@ -1317,6 +1311,26 @@ body::before, body::after, html::before, html::after { display: none !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 90px !important;
+    padding-bottom: 40px !important;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 0 20px !important;
+  }
+  .hero h1 { font-size: 28px !important; line-height: 1.25 !important; }
+  .hero-subtitle, .hero-sub { font-size: 15px !important; }
+  .hero-right { display: none !important; }
+  .hero-cta { flex-direction: column !important; gap: 10px !important; }
+  .hero-cta a { width: 100% !important; justify-content: center !important; text-align: center !important; }
+  .hero-trust { flex-wrap: wrap !important; gap: 8px !important; }
+  .hero-badge { margin-top: 0 !important; }
 }
 
 </style>
