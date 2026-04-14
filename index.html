@@ -37,7 +37,7 @@
        CSS VARIABLES
     ============================================= */
     :root {
-      --green: #1a3c2e;
+      --green: #ffffff;
       --green-dark: #122b20;
       --green-deeper: #0a1f15;
       --green-light: #e8f5ee;
@@ -570,10 +570,6 @@
     .service-card:hover::before {
       transform: scaleX(1);
     }
-    .service-card.featured { background: var(--white); border-color: var(--border); }
-    .service-card.featured::before {
-      background: var(--gold);
-    }
     .service-number {
       font-size: 12px;
       font-weight: 700;
@@ -582,9 +578,6 @@
       margin-bottom: 20px;
       display: block;
     }
-    .service-card.featured .service-number {
-      color: var(--gold-light);
-    }
     .service-card h3 {
       font-size: 22px;
       font-weight: 700;
@@ -592,13 +585,11 @@
       margin-bottom: 14px;
       letter-spacing: -0.01em;
     }
-    .service-card.featured h3 { color: var(--forest); }
     .service-card p {
       font-size: 15px;
       color: var(--text-muted);
       line-height: 1.65;
     }
-    .service-card.featured p { color: var(--text-muted); }
     .service-arrow {
       display: inline-flex;
       align-items: center;
@@ -611,9 +602,6 @@
     }
     .service-card:hover .service-arrow {
       gap: 10px;
-    }
-    .service-card.featured .service-arrow {
-      color: var(--gold-light);
     }
     @media (max-width: 768px) {
       .services-grid {
@@ -979,15 +967,7 @@ html, body { background: #f8f5f0 !important; margin: 0 !important; padding: 0 !i
 
 
 /* All service cards uniform */
-.service-card, .service-card.featured {
-  background: var(--white) !important;
-  border: 1px solid var(--border) !important;
-  color: inherit !important;
-}
-.service-card.featured h3, .service-card h3 { color: var(--forest) !important; }
-.service-card.featured p, .service-card p { color: var(--text-muted) !important; }
-.service-card.featured .service-num, .service-num { color: var(--gold) !important; }
-.service-card.featured .learn-more, .learn-more { color: var(--forest) !important; }
+.service-card,
 
 
 /* Logo fixes */
@@ -1170,7 +1150,7 @@ html, body { background: #f8f5f0 !important; margin: 0 !important; padding: 0 !i
           <p>Operate under our AFSL with full compliance support, supervision, onboarding and advice management — tailored to your practice.</p>
           <a href="https://api.leadconnectorhq.com/widget/booking/EES2gzrU89UBYJYY3l2p" target="_blank" class="service-arrow">Learn more →</a>
         </div>
-        <div class="service-card featured fade-up fade-up-delay-1">
+        <div class="service-card fade-up fade-up-delay-1">
           <span class="service-number">02 · Compliance</span>
           <h3>Compliance &amp; Risk Management</h3>
           <p>Establish and maintain a strong compliance and risk framework from day one — so you stay ahead of your ASIC obligations.</p>
