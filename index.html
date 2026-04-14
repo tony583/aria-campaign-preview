@@ -1377,6 +1377,27 @@ body::before, body::after, html::before, html::after { display: none !important;
   display: block !important;
 }
 
+
+/* Footer background */
+footer {
+  background: #0a1f15 !important;
+  color: rgba(255,255,255,0.7);
+}
+footer * { box-sizing: border-box; }
+.footer-brand p, .footer-tagline { color: rgba(255,255,255,0.5) !important; }
+.footer-col h4 { color: rgba(255,255,255,0.4) !important; }
+.footer-col a { color: rgba(255,255,255,0.65) !important; text-decoration: none; }
+.footer-col a:hover { color: #ffffff !important; }
+.footer-copy { color: rgba(255,255,255,0.35) !important; font-size: 13px; }
+.footer-legal a { color: rgba(255,255,255,0.45) !important; font-size: 13px; text-decoration: none; }
+.footer-legal a:hover { color: #ffffff !important; }
+.footer-top { border-bottom-color: rgba(255,255,255,0.1) !important; padding: 60px 0 48px !important; }
+
+@media (max-width: 768px) {
+  .footer-top { grid-template-columns: 1fr !important; gap: 32px !important; padding: 40px 0 32px !important; }
+  footer .container { padding: 0 20px !important; }
+}
+
 </style>
 </head>
 <body>
