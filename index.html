@@ -90,8 +90,8 @@
        ANIMATIONS
     ============================================= */
     .fade-up {
-      opacity: 0;
-      transform: translateY(32px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
     .fade-up.visible {
@@ -1003,6 +1003,42 @@ body::before, body::after, html::before, html::after { display: none !important;
 .service-card .service-arrow {
   color: inherit !important;
 }
+
+
+/* Trust bar explicit colors */
+.trust-bar { background: #1a3c2e !important; }
+.trust-stat-value { color: #c9a84c !important; font-size: 28px; font-weight: 800; }
+.trust-stat-label { color: rgba(255,255,255,0.7) !important; font-size: 13px; }
+.trust-stat-icon { color: #fff !important; }
+
+/* Hero text fix */
+.hero-badge { color: #1a3c2e !important; background: #e8f5ee !important; }
+.hero h1 { color: #0f1f17 !important; }
+.hero h1 span { color: #1a3c2e !important; }
+.hero-subtitle { color: #4a5568 !important; }
+.trust-item { color: #4a5568 !important; }
+.trust-item svg, .trust-item::before { color: #1a3c2e !important; }
+
+/* Buttons explicit */
+.btn-primary { background: #1a3c2e !important; color: #ffffff !important; border-color: #1a3c2e !important; }
+.btn-outline { background: transparent !important; color: #1a3c2e !important; border: 2px solid #1a3c2e !important; }
+.btn-white { background: #ffffff !important; color: #1a3c2e !important; }
+.btn-white-outline { background: transparent !important; color: #ffffff !important; border: 2px solid rgba(255,255,255,0.6) !important; }
+
+/* Nav */
+.nav { background: #ffffff !important; }
+.nav-link { color: #0f1f17 !important; }
+.nav-cta { background: #1a3c2e !important; color: #ffffff !important; }
+
+/* Service cards */
+.service-card { background: #ffffff !important; }
+.service-number { color: #c9a84c !important; }
+.service-card h3 { color: #0f1f17 !important; }
+.service-card p { color: #4a5568 !important; }
+
+/* Stat card */
+.stat-value { color: #1a3c2e !important; font-size: 24px; font-weight: 800; }
+.stat-label { color: #4a5568 !important; }
 
 </style>
 </head>
