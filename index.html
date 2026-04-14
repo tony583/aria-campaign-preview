@@ -124,7 +124,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 40px;
-      height: 72px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -134,8 +134,10 @@
       flex-shrink: 0;
     }
     .nav-logo img {
-      height: 64px;
+      height: 56px;
       width: auto;
+      display: block;
+      background: transparent;
     }
     .nav-links {
       display: flex;
@@ -957,38 +959,49 @@ html { margin: 0 !important; padding: 0 !important; }
 nav, #navbar, header { margin-top: 0 !important; top: 0 !important; }
 /* Remove any black elements */
 body::before, body::after, html::before, html::after { display: none !important; }
-.nav-logo img { height: 72px !important; width: auto !important; object-fit: contain; display: block; }
-
-
-/* Remove black bars completely */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { background: #f8f5f0 !important; margin: 0 !important; padding: 0 !important; overflow-x: hidden; }
-.nav-inner { height: 80px; align-items: center; }
-
-
-/* All service cards uniform */
-.service-card,
-
-
-/* Logo fixes */
-.nav-logo img {
-  height: 72px !important;
-  width: auto !important;
-  object-fit: contain;
-  display: block;
-  
-  background: transparent !important;
+/* ── OVERRIDES ── */
+/* Nav: fixed height, white background, no overflow issues */
+.nav {
+  height: 80px !important;
+  background: #ffffff !important;
+  overflow: visible !important;
 }
-
-
 .nav-inner {
+  height: 80px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
-  padding: 0 2rem !important;
-  height: 88px !important;
+  padding: 0 40px !important;
+}
+
+/* Logo: 56px height, transparent background, no bars */
+.nav-logo img {
+  height: 56px !important;
+  width: auto !important;
+  display: block !important;
+  background: transparent !important;
+  object-fit: contain !important;
+  line-height: 1 !important;
+}
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  line-height: 0 !important;
+  background: transparent !important;
+}
+
+/* Service cards: all uniform white */
+.service-card {
+  background: #ffffff !important;
+  color: #0f1f17 !important;
+}
+.service-card h3,
+.service-card p,
+.service-card .service-number,
+.service-card .service-arrow {
+  color: inherit !important;
 }
 
 </style>
