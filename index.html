@@ -115,6 +115,7 @@
       background: var(--white);
       border-bottom: 1px solid var(--border);
       transition: box-shadow var(--transition);
+      height: 80px;
     }
     .nav.scrolled {
       box-shadow: 0 2px 20px rgba(15,31,23,0.1);
@@ -133,7 +134,7 @@
       flex-shrink: 0;
     }
     .nav-logo img {
-      height: 48px;
+      height: 64px;
       width: auto;
     }
     .nav-links {
@@ -310,6 +311,7 @@
     .hero {
       background: var(--cream);
       padding: var(--section-py) 0;
+      padding-top: 140px;
       padding-bottom: 80px;
     }
     .hero-inner {
@@ -967,7 +969,22 @@
       border-radius: 2px;
       margin-bottom: 24px;
     }
-  </style>
+  
+/* Remove black bars */
+body { margin: 0 !important; padding: 0 !important; }
+html { margin: 0 !important; padding: 0 !important; }
+nav, #navbar, header { margin-top: 0 !important; top: 0 !important; }
+/* Remove any black elements */
+body::before, body::after, html::before, html::after { display: none !important; }
+.nav-logo img { height: 72px !important; width: auto !important; object-fit: contain; display: block; }
+
+
+/* Remove black bars completely */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { background: #f8f5f0 !important; margin: 0 !important; padding: 0 !important; overflow-x: hidden; }
+.nav-inner { height: 80px; align-items: center; }
+
+</style>
 </head>
 <body>
 
