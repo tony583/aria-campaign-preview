@@ -1191,6 +1191,76 @@ body::before, body::after, html::before, html::after { display: none !important;
   h2 { font-size: 20px !important; }
 }
 
+
+@media (max-width: 768px) {
+  /* About section - add spacing between elements */
+  #about > div > p { margin-bottom: 24px !important; }
+  #about > div > div[style*="margin-bottom:48px"],
+  #about > div > div[style*="margin-bottom: 48px"] { margin-bottom: 32px !important; }
+
+  /* Stat boxes - ensure they look good stacked */
+  #about .grid-3 > div[style*="background:#1a3c2e"],
+  #about .grid-3 > div[style*="background: #1a3c2e"] {
+    padding: 20px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Value cards */
+  #about .grid-3 > div[style*="background:#f8f5f0"],
+  #about .grid-3 > div[style*="background: #f8f5f0"] {
+    padding: 20px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Team cards */
+  #about .grid-2 > div { margin-bottom: 0 !important; }
+  #about .grid-2 > div > div[style*="height:100px"] {
+    height: 70px !important;
+  }
+
+  /* Fix spacing after intro paragraph */
+  #about h2 { margin-bottom: 16px !important; }
+
+  /* Pain points on mobile */
+  #pain-points .grid-3 > div { padding: 20px !important; }
+
+  /* Licensee services on mobile */
+  #licensee-services .grid-3 > div { padding: 20px !important; }
+  #licensee-services .grid-2 > div { padding: 18px !important; }
+
+  /* Specialist services on mobile */
+  #specialist-services .grid-3 > div { padding: 18px !important; }
+  #specialist-services .grid-2 > div { padding: 18px !important; }
+
+  /* Contact on mobile */
+  #contact .grid-contact > div:first-child { order: 2; }
+  #contact .grid-contact > div:last-child { order: 1; }
+  #contact .grid-2 { gap: 10px !important; }
+
+  /* General - ensure all section containers have proper mobile padding */
+  #about > div,
+  #licensee-services > div,
+  #specialist-services > div,
+  #contact > div,
+  #pain-points > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    max-width: 100% !important;
+  }
+
+  /* Subsection divs inside specialist services */
+  #specialist-services > div > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  #specialist-services > div > div > div[style*="max-width:1200px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 </style>
 </head>
 <body>
