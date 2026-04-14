@@ -570,10 +570,7 @@
     .service-card:hover::before {
       transform: scaleX(1);
     }
-    .service-card.featured {
-      background: var(--green);
-      border-color: var(--green);
-    }
+    .service-card.featured { background: var(--white); border-color: var(--border); }
     .service-card.featured::before {
       background: var(--gold);
     }
@@ -595,17 +592,13 @@
       margin-bottom: 14px;
       letter-spacing: -0.01em;
     }
-    .service-card.featured h3 {
-      color: var(--white);
-    }
+    .service-card.featured h3 { color: var(--forest); }
     .service-card p {
       font-size: 15px;
       color: var(--text-muted);
       line-height: 1.65;
     }
-    .service-card.featured p {
-      color: rgba(255,255,255,0.75);
-    }
+    .service-card.featured p { color: var(--text-muted); }
     .service-arrow {
       display: inline-flex;
       align-items: center;
@@ -983,6 +976,40 @@ body::before, body::after, html::before, html::after { display: none !important;
 *, *::before, *::after { box-sizing: border-box; }
 html, body { background: #f8f5f0 !important; margin: 0 !important; padding: 0 !important; overflow-x: hidden; }
 .nav-inner { height: 80px; align-items: center; }
+
+
+/* All service cards uniform */
+.service-card, .service-card.featured {
+  background: var(--white) !important;
+  border: 1px solid var(--border) !important;
+  color: inherit !important;
+}
+.service-card.featured h3, .service-card h3 { color: var(--forest) !important; }
+.service-card.featured p, .service-card p { color: var(--text-muted) !important; }
+.service-card.featured .service-num, .service-num { color: var(--gold) !important; }
+.service-card.featured .learn-more, .learn-more { color: var(--forest) !important; }
+
+
+/* Logo fixes */
+.nav-logo img {
+  height: 72px !important;
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply;
+  background: transparent !important;
+}
+
+
+.nav-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  height: 88px !important;
+}
 
 </style>
 </head>
