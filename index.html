@@ -457,11 +457,11 @@ section > div { max-width: 1600px !important; margin: 0 auto !important; padding
         grid-template-columns: 1fr;
         gap: 48px;
       }
-      .hero h1 { font-size: 42px; }
+      .hero 
     }
     @media (max-width: 768px) {
       .hero-inner { padding: 0 20px; }
-      .hero h1 { font-size: 36px; }
+      .hero 
       .hero-sub { font-size: 16px; }
       .hero-trust { gap: 16px; }
     }
@@ -625,7 +625,7 @@ section > div { max-width: 1600px !important; margin: 0 auto !important; padding
       .services-grid {
         grid-template-columns: 1fr;
       }
-      .section-header h2 { font-size: 30px; }
+      .section-header 
       .section-header-row { flex-direction: column; align-items: flex-start; }
     }
 
@@ -696,7 +696,7 @@ section > div { max-width: 1600px !important; margin: 0 auto !important; padding
       .process-grid {
         grid-template-columns: 1fr;
       }
-      .process-intro h2 { font-size: 30px; }
+      .process-intro 
     }
 
     /* =============================================
@@ -730,7 +730,7 @@ section > div { max-width: 1600px !important; margin: 0 auto !important; padding
       flex-wrap: wrap;
     }
     @media (max-width: 768px) {
-      .mid-cta h2 { font-size: 26px; }
+      .mid-cta 
       .mid-cta p { font-size: 15px; }
     }
 
@@ -874,7 +874,7 @@ section > div { max-width: 1600px !important; margin: 0 auto !important; padding
       color: var(--white);
     }
     @media (max-width: 768px) {
-      .final-cta h2 { font-size: 30px; }
+      .final-cta 
       .final-cta p { font-size: 15px; }
     }
 
@@ -1095,7 +1095,7 @@ body::before, body::after, html::before, html::after { display: none !important;
   /* Hero section */
   
   .hero-inner { grid-template-columns: 1fr !important; gap: 32px !important; }
-  .hero h1 { font-size: 32px !important; }
+  .hero 
   .hero-subtitle { font-size: 15px !important; }
   .hero-right { display: none !important; }
   .hero-trust { flex-wrap: wrap !important; gap: 8px !important; }
@@ -1154,7 +1154,7 @@ body::before, body::after, html::before, html::after { display: none !important;
   }
 
   /* Services section heading */
-  .services h2 { font-size: 26px !important; }
+  .services 
 
   /* Process steps */
   .process-grid { grid-template-columns: repeat(2, 1fr) !important; }
@@ -1168,8 +1168,8 @@ body::before, body::after, html::before, html::after { display: none !important;
   .final-cta-buttons { flex-direction: column !important; align-items: center !important; }
 
   /* Headings */
-  h1 { font-size: 30px !important; }
-  h2 { font-size: 24px !important; }
+  
+  
 
   /* Buttons full width on mobile */
   #pain-points a[style*="inline-flex"] { width: auto !important; }
@@ -1181,8 +1181,8 @@ body::before, body::after, html::before, html::after { display: none !important;
 
 @media (max-width: 480px) {
   .trust-bar-inner { grid-template-columns: 1fr !important; }
-  .hero h1 { font-size: 26px !important; }
-  h2 { font-size: 22px !important; }
+  .hero 
+  
   section { padding: 48px 0 !important; }
 }
 
@@ -1197,13 +1197,13 @@ body::before, body::after, html::before, html::after { display: none !important;
   .grid-3, .grid-2, .grid-contact { grid-template-columns: 1fr !important; gap: 14px !important; }
   section { padding: 60px 0 !important; }
   section > div { padding-left: 20px !important; padding-right: 20px !important; }
-  h1 { font-size: 28px !important; line-height: 1.2 !important; }
-  h2 { font-size: 24px !important; }
+  
+  
   h3 { font-size: 20px !important; }
 }
 @media (max-width: 480px) {
-  h1 { font-size: 24px !important; }
-  h2 { font-size: 20px !important; }
+  
+  
 }
 
 
@@ -1340,7 +1340,7 @@ body::before, body::after, html::before, html::after { display: none !important;
     gap: 24px !important;
     padding: 0 20px !important;
   }
-  .hero h1 { font-size: 32px !important; line-height: 1.25 !important; }
+  .hero 
   .hero-subtitle, .hero-sub { font-size: 15px !important; }
   .hero-right { display: none !important; }
   .hero-cta { flex-direction: column !important; gap: 10px !important; }
@@ -1447,7 +1447,7 @@ html { background: #0a1f15 !important; }
     grid-template-columns: 58fr 42fr !important;
     gap: 48px !important;
   }
-  .hero h1 { font-size: 52px !important; }
+  .hero 
 }
 
 
@@ -1489,6 +1489,53 @@ section h2 {
 /* Cards fill space better */
 .grid-3 { grid-template-columns: repeat(3, 1fr) !important; gap: 24px !important; }
 .grid-2 { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
+
+
+/* ====== FINAL OVERRIDES ====== */
+/* Typography */
+h1 { font-size: 64px !important; font-weight: 900 !important; line-height: 1.08 !important; letter-spacing: -0.03em !important; }
+h2 { font-size: 44px !important; font-weight: 800 !important; line-height: 1.15 !important; }
+h3 { font-size: 24px !important; font-weight: 700 !important; }
+p { font-size: 17px !important; line-height: 1.7 !important; }
+body { font-size: 17px !important; }
+
+/* Hero specifically */
+.hero h1 { font-size: 64px !important; }
+.hero-sub, .hero-subtitle { font-size: 18px !important; }
+.hero-badge { font-size: 13px !important; padding: 10px 20px !important; }
+
+/* Section headings */
+.section-heading, .eyebrow + h2 { font-size: 44px !important; }
+
+/* Cards */
+.service-card h3, .card h3 { font-size: 20px !important; }
+.service-card p, .card p { font-size: 15px !important; }
+
+/* Trust stat values */
+.trust-stat-value { font-size: 36px !important; }
+.stat-value { font-size: 28px !important; }
+
+/* Layout - full width */
+.nav-inner,
+.container,
+section > div {
+  max-width: 1600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 26px !important; }
+  p { font-size: 15px !important; }
+  .hero h1 { font-size: 32px !important; }
+  section > div, .container, .nav-inner { padding-left: 20px !important; padding-right: 20px !important; }
+}
 
 </style>
 </head>
