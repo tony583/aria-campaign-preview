@@ -134,7 +134,7 @@
       flex-shrink: 0;
     }
     .nav-logo img {
-      height: 56px;
+      height: 80px;
       width: auto;
       display: block;
       background: transparent;
@@ -985,7 +985,7 @@ body::before, body::after, html::before, html::after { display: none !important;
 
 /* Logo: 56px height, transparent background, no bars */
 .nav-logo img {
-  height: 56px !important;
+  height: 80px !important;
   width: auto !important;
   display: block !important;
   background: transparent !important;
@@ -1403,6 +1403,13 @@ footer * { box-sizing: border-box; }
 footer, footer > *, footer .container { background: #0a1f15 !important; }
 body { background: #ffffff !important; }
 html { background: #0a1f15 !important; }
+
+
+/* Logo size override */
+.nav-logo img { height: 80px !important; width: auto !important; }
+@media (max-width: 768px) {
+  .nav-logo img { height: 64px !important; }
+}
 
 </style>
 </head>
