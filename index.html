@@ -887,7 +887,7 @@
       height: 40px;
       width: auto;
       margin-bottom: 16px;
-      filter: brightness(10);
+      filter: brightness(0) invert(1);
       opacity: 0.9;
     }
     .footer-tagline {
@@ -1409,6 +1409,15 @@ html { background: #0a1f15 !important; }
 .nav-logo img { height: 80px !important; width: auto !important; }
 @media (max-width: 768px) {
   .nav-logo img { height: 64px !important; }
+}
+
+
+/* Footer logo fix */
+.footer-brand img {
+  filter: brightness(0) invert(1) !important;
+  opacity: 0.9 !important;
+  height: 48px !important;
+  width: auto !important;
 }
 
 </style>
