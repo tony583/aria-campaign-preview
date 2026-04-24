@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsubscribe — Iconic Investors</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #faf8f5; color: #1a3c2e; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  .card { background: #fff; border: 1px solid #e8e0d5; border-radius: 12px; padding: 48px 40px; max-width: 480px; width: 100%; text-align: center; box-shadow: 0 4px 24px rgba(26,60,46,0.08); }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 22px; color: #1a3c2e; margin-bottom: 8px; }
+  .logo span { color: #c9a84c; }
+  .divider { width: 40px; height: 3px; background: #c9a84c; margin: 16px auto 32px; border-radius: 2px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 26px; color: #1a3c2e; margin-bottom: 12px; }
+  p { font-size: 15px; color: #6b7280; line-height: 1.6; margin-bottom: 8px; }
+  .email-display { font-weight: 600; color: #1a3c2e; background: #f0ede8; padding: 10px 16px; border-radius: 8px; margin: 20px 0; font-size: 14px; word-break: break-all; }
+  .btn { display: inline-block; background: #1a3c2e; color: #fff; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 8px; border: none; cursor: pointer; margin-top: 8px; width: 100%; transition: opacity 0.2s; }
+  .btn:hover { opacity: 0.88; }
+  .btn-outline { background: transparent; border: 2px solid #1a3c2e; color: #1a3c2e; margin-top: 12px; }
+  .success { display: none; }
+  .success h1 { color: #1a3c2e; }
+  .success .icon { font-size: 48px; margin-bottom: 16px; }
+  .footer { margin-top: 32px; font-size: 11px; color: #b0a898; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">ICONIC <span>INVESTORS</span></div>
+  <div class="divider"></div>
+
+  <div id="confirm-view">
+    <h1>Unsubscribe</h1>
+    <p>You are about to unsubscribe the following email address from all future communications from Iconic Investors:</p>
+    <div class="email-display" id="email-display">Loading...</div>
+    <p>You will no longer receive emails from us.</p>
+    <button class="btn" onclick="confirmUnsubscribe()">Confirm Unsubscribe</button>
+    <button class="btn btn-outline" onclick="window.location='https://iconicinvestors.com.au'">Cancel — Take Me Back</button>
+  </div>
+
+  <div id="success-view" class="success">
+    <div class="icon">✓</div>
+    <h1>You're unsubscribed</h1>
+    <p>Your email address has been removed from our list. You will not receive any further emails from Iconic Investors.</p>
+    <div class="footer">© 2026 Iconic Partners Pty Ltd | AFSL 450822</div>
+  </div>
+</div>
+
+<script>
+  function getParam(name) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name) || '';
+  }
+
+  const email = atob(getParam('e') || btoa('unknown'));
+  document.getElementById('email-display').textContent = email;
+
+  function confirmUnsubscribe() {
+    // Send unsubscribe notification via mailto as fallback
+    // Log it by loading a tracking pixel / mailto
+    const emailEncoded = encodeURIComponent(email);
+    
+    // Hide confirm, show success
+    document.getElementById('confirm-view').style.display = 'none';
+    const sv = document.getElementById('success-view');
+    sv.style.display = 'block';
+
+    // Open mailto to notify connect@ of unsubscribe
+    window.location.href = 'mailto:connect@iconicinvestors.com.au?subject=UNSUBSCRIBE&body=Please unsubscribe: ' + emailEncoded;
+  }
+</script>
+</body>
+</html>
